@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 	}
 
-	// scrollAnimation();
+	scrollAnimation();
 	window.addEventListener('scroll', () => {
 		scrollAnimation()
 	})
