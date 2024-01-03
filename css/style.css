@@ -47,6 +47,9 @@ body {
   font-family: 'Rubik', sans-serif;
   color: var(--grey);
 }
+body.active {
+	overflow: hidden;
+}
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -149,6 +152,14 @@ body {
   left: 0;
   background-color: #fff;
   z-index: 99;
+}
+.header::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
 }
 .header__container {
   min-height: 135px;
@@ -304,6 +315,8 @@ body {
     justify-content: center;
     row-gap: 20px;
     box-shadow: 0 0 10px #4f5665;
+		padding-top: 70px;
+		overflow-y: scroll;
     transition: right .5s ease;
   }
   .menu-header__list.menu-header__list_active {

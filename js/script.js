@@ -2,10 +2,11 @@
 // Burger-----------------------------------------------------------
 let headerBurger = document.querySelector('.header__burger');
 let headerMenu = document.querySelector('.menu-header__list');
-
+let body = document.querySelector('body')
 headerBurger.addEventListener('click', (e) => {
   headerBurger.classList.toggle('header__burger_active');
   headerMenu.classList.toggle('menu-header__list_active')
+	body.classList.toggle('active');
 })
 
 // Slider--------------------------------------------------------------
@@ -59,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		scrollItems.forEach(el => {
 			let scrollOffset = el.offsetTop + (el.offsetHeight / 10);
-			console.log(scrollOffset)
 			if(windowCenter >= scrollOffset) {
 				el.classList.add('animation-class')
 			} else {
